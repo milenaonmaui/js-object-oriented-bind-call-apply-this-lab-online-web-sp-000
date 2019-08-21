@@ -3,9 +3,6 @@ function justInvoke(fn) {
   return fn()
 }
 
-const write = function(){
-  console.log('Write something');
-  return true;
+function setThisWithCall(fn, thisValue, arg){
+  return fn.call(thisValue, arg)
 }
-
-console.log(justInvoke(write))
